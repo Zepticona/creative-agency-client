@@ -1,6 +1,6 @@
 .App {
   text-align: center;
 }
-/* a:hover {
-  text-decoration: none;
-} */
+.brandText {
+  color: #7AB259;
+}

@@ -1,0 +1,28 @@
+.singleFeedbackContainer {
+    border: 1px solid #BFBFBF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 20px;
+}
+.clientInfo {
+    margin-bottom: 10px;
+}
+.clientInfo img {
+    width: 64px;
+    height: 64px;
+}
+.clientInfo p {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+    position: relative;
+    top: 20px;
+}
+.clientInfo p small {
+    font-weight: 500;
+    font-size: 16px;
+}
+.clientFeedback {
+    color: #707070;
+}

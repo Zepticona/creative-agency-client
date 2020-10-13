@@ -14,3 +14,9 @@ code {
 body a:hover {
   text-decoration: none;
 }
+.owl-theme .owl-dots .owl-dot span {
+  background: #242A65 !important;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #FBD062 !important;
+}

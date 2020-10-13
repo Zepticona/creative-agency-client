@@ -1,0 +1,16 @@
+.carouselContainer {
+    background: #111430;
+    padding: 40px 0;
+}
+.carouselContainer h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 34px;
+}
+.carouselContainer img {
+    width: 465.49px;
+    height: 334.7px;
+    border-radius: 8.23879px;
+}

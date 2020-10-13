@@ -27,7 +27,7 @@ const serviceData = [
 const Services = () => {
     return (
         <Container style={{marginBottom: '100px'}}>
-            <h2 style={{textAlign: 'center', marginBottom: '50px'}}>Provice Awesome Services</h2>
+            <h2 style={{textAlign: 'center', marginBottom: '50px'}}>Provice awesome <span className="brandText">services</span></h2>
             <Row>
             {
                 serviceData.map( service => <Col md={4} key={service.id}><SingleService serviceInfo={service}></SingleService></Col>)

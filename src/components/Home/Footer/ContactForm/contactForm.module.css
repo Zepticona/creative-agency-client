@@ -1,0 +1,30 @@
+.contactSectionContent h2 {
+    color: #2D2D2D;
+    font-size: 34px;
+    font-weight: 600;
+}
+.contactSectionContent p {
+    font-weight: 300;
+    font-size: 14px;
+}
+.contactSectionContainer input {
+    display: block;
+    width: 630px;
+    height: 70px;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.contactSectionContainer textarea {
+    height: 277px;
+    width: 630px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.contactSectionContainer input[type= submit] {
+    width: 170px;
+    height: 45px;
+    background: #111430;
+    color: white;
+}
