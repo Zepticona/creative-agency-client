@@ -1,0 +1,18 @@
+.siteLogo {
+    width: 150px;
+    height: 47px;
+}
+.navigationMenu a{
+    color: #474747;
+    font-size: 14px;
+    width: 134px;
+    height: 45px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+.navigationMenu a:hover {
+    background-color: #111430;
+    color: #fff;
+}

@@ -1,0 +1,10 @@
+.customersContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+.customersContainer img {
+    width: 161px;
+    height: 51px;
+    opacity: 0.4;
+}
