@@ -1,0 +1,30 @@
+.userOrdersForm {
+    padding: 30px;
+    background-color: #F4F7FC;
+}
+.serviceIcon {
+    width: 74px;
+    height: 74px;
+}
+.orderDescription h6 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.orderDescription p {
+    font-weight: 300;
+}
+.servicesContainer {
+    padding: 30px;
+    background: #F4F7FC;
+    height: 100vh;
+}
+.orderedHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+.singleOrderContainer {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}

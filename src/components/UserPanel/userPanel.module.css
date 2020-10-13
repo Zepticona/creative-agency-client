@@ -1,0 +1,11 @@
+.wrappingContainer {
+    display: flex;
+    padding: 15px;
+    height: 100vh;
+}
+.userNavigationPanel {
+    width: 26%;
+}
+.userInfoPanel {
+    width: 100%;
+}
