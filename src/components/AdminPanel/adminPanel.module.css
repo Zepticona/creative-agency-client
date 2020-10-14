@@ -1,0 +1,9 @@
+.addServiceContainer {
+    background-color: #F4F7FC;
+    height: 100vh;
+    padding: 40px;
+}
+.formContainer {
+    background-color: white;
+    padding: 20px;
+}

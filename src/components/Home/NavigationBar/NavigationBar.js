@@ -26,6 +26,9 @@ const NavigationBar = () => {
                     <Link to="/home">
                         Contact Us
                     </Link>
+                    <Link to="/adminPanel">
+                        Admin
+                    </Link>
                     <Link to="/login">
                         Login
                     </Link>

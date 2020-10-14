@@ -1,31 +1,30 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { UserContext } from '../../../../App';
 import SingleOrder from '../SingleOrder/SingleOrder';
 import classes from '../userPanelInfo.module.css'
 
-const orderedServices = [
-    {
-        id: 1,
-        img: 'img Link',
-        name: 'Web Design',
-        status: 'Pending'
-    },
-    {
-        id: 2,
-        img: 'img Link',
-        name: 'Graphic Design',
-        status: 'Done'
-    },
-]
+
 
 const UsersOrderedServices = () => {
+    const [loggedInUser, setLoggedInsuer] = useContext(UserContext);
+    const [orderedServices, setOrderedServices] = useState([]);
+    useEffect( () => {
+        fetch(`http://localhost:8080/orders/${loggedInUser.email}`)
+        .then( res => res.json())
+        .then( data => {
+            const orders = [...data]
+            setOrderedServices(orders)
+            console.log(data)
+        })
+    }, [])
     return (
         <div>
-            <h2 style={{ marginBottom: '20px', marginTop: '25px' }}>Add Event</h2>
+            <h2 style={{ marginBottom: '20px', marginTop: '25px' }}>Ordered Services</h2>
             <div className={classes.servicesContainer}>
                 <Row>
                     {
-                        orderedServices.map( service => <Col key={service.id} md={5}><SingleOrder></SingleOrder></Col>)
+                        orderedServices.map( order => <Col key={order._id} md={5}><SingleOrder orderInfo={order}></SingleOrder></Col>)
                     }
                 </Row>
             </div>

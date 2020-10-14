@@ -1,15 +1,18 @@
 import React from 'react';
 import classes from './singleFeedback.module.css'
-const SingleFeedback = () => {
+const SingleFeedback = (props) => {
+    console.log(props)
+    const {reviewer, designation, feedback, reviewerImg} = props.reviewInfo
     return (
         <div className={classes.singleFeedbackContainer}>
             <div className={classes.clientInfo}>
-                <img src={require('../../../../assets/images/customer-2.png')} alt="client"/>
-                <p>Name <br/> <small>Designation</small></p>
-                
+                <img src={`http://localhost:8080/${reviewerImg}`} alt="client"/>
+                <p>{reviewer}<br/> <small>{designation}</small></p>
             </div>
             <div className={classes.clientFeedback}>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis beatae, omnis voluptatem quae vitae officia! Dolores inventore quo cupiditate deleniti perferendis. Dolor unde quisquam fugiat? Quam doloremque ut dicta tempore.</p>
+                <p>
+                    {feedback}
+                </p>
             </div>
         </div>
     );

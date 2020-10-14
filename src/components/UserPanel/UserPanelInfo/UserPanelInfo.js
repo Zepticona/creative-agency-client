@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     Switch,
-    Route
+    Route,
+    Router
   } from "react-router-dom";
 import UserOrder from './UserOrders/UserOrder';
 import UserOrdersReview from './UserOrdersReview/UserOrdersReview';
@@ -10,7 +11,7 @@ import UsersOrderedServices from './UsersOrderedServices/UsersOrderedServices';
 const UserPanelInfo = () => {
     return (
             <Switch>
-                <Route path="/userPanel/orders">
+                <Route path="/userPanel/orders/:serviceId">
                     <UserOrder></UserOrder>
                 </Route>
                 <Route path="/userPanel/orderedServices">
@@ -20,6 +21,7 @@ const UserPanelInfo = () => {
                     <UserOrdersReview></UserOrdersReview>
                 </Route>
             </Switch> 
+            
     );
 };
 

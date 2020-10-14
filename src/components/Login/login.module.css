@@ -1,0 +1,42 @@
+body {
+    background: #F9FAFC;
+}
+.wrappingContainer {
+    padding-top: 100px;
+    text-align: center;
+}
+.siteLogo {
+    width: 300px;
+}
+.loginBox {
+    width: 500px;
+    height: 370px;
+    margin: 20px auto;
+    padding: 100px 20px;
+    /* border: 1px solid black; */
+    background: white;
+    box-shadow: 0 0 1px 0px grey;
+}
+.loginBtn {
+    width: 360px;
+    background: white;
+    border: none;
+    text-align: center;
+    padding: 10px 2px;
+    position: relative;
+    box-shadow: 0px 0px 2px 0px grey;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all .3s ease;
+}
+.loginBtn:hover {
+    transform: scale(1.08)
+}
+.loginBtn img {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 2px;
+    top: 5px;
+}

@@ -1,6 +1,7 @@
 .userOrdersForm {
     padding: 30px;
     background-color: #F4F7FC;
+    height: 100vh;
 }
 .serviceIcon {
     width: 74px;

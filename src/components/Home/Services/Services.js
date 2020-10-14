@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import SingleService from './SingleService/SingleService';
 const serviceData = [
     {
@@ -25,12 +26,26 @@ const serviceData = [
      }
 ]
 const Services = () => {
+    const [services, setServices] = useState([]);
+    useEffect( () => {
+        fetch('http://localhost:8080/allServices')
+        .then( res => res.json())
+        .then ( data => {
+            const newServices = [...data];
+            // console.log(newServices)
+            setServices(newServices)
+        })
+    }, [])
     return (
         <Container style={{marginBottom: '100px'}}>
             <h2 style={{textAlign: 'center', marginBottom: '50px'}}>Provice awesome <span className="brandText">services</span></h2>
             <Row>
             {
-                serviceData.map( service => <Col md={4} key={service.id}><SingleService serviceInfo={service}></SingleService></Col>)
+                services.map( service => 
+                    <Col md={4} key={service._id}>
+                        <Link to={`/userPanel/orders/${service._id}`}><SingleService serviceInfo={service} /></Link>
+                    </Col>
+                )
             }
             </Row>
         </Container>

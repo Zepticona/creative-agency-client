@@ -1,12 +1,13 @@
 import React from 'react';
 import classes from './singleService.module.css'
 
-const SingleService = ({serviceInfo}) => {
+const SingleService = (props) => {
+    const {servName, servImg, servDescription} = props.serviceInfo
     return (
         <div className={classes.singleServiceContainer}>
-            <img src={require('../../../../assets/images/icons/service1.png')} alt=""/>
-            <h4>{serviceInfo.name}</h4>
-            <p>{serviceInfo.description}</p>
+            <img src={`http://localhost:8080/${servImg}`} alt="service"/>
+            <h4>{servName}</h4>
+            <p>{servDescription}</p>
         </div>
     );
 };
