@@ -13,6 +13,12 @@ const MakeAdmin = () => {
         setEmail(adminEmail);
     }
 
+    useEffect( () => {
+        // fetch('http://localhost:8080/isAdmin', {
+        //     method: 'POST'
+        // })
+    }, [])
+
     const handleFormSubmit = e => {
         fetch('http://localhost:8080/addAdmin', {
             method: 'POST',

@@ -24,30 +24,12 @@ const Login = () => {
     const googleLoginHandler = () => {
         firebase.auth().signInWithPopup(provider)
         .then(result => {
-            fetch('http://localhost:8080/getAdminEmails')
-            .then(res => res.json())
-            .then( data => {
-                const adminEmail = data.find( adminMail => adminMail.email === result.user.email);
-                console.log(`[login.js] ${adminEmail}`)
-                if(adminEmail) {
-                    const userInfos = {
-                        name: result.user.displayName,
-                        email: result.user.email,
-                        isAdmin: true
-                    }
-                    setLoggedInuser(userInfos);
-                } else {
-                    const userInfos = {
-                        name: result.user.displayName,
-                        email: result.user.email,
-                        isAdmin: false
-                    }
-                    setLoggedInuser(userInfos);
-                }
-            })
-            
+            const userInfos = {
+                name: result.user.displayName,
+                email: result.user.email
+            }
+            setLoggedInuser(userInfos);
             history.replace(from);
-            
         })
         .catch( error => {
             // Handle Errors here.
