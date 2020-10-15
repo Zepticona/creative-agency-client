@@ -11,7 +11,7 @@ import UsersOrderedServices from './UsersOrderedServices/UsersOrderedServices';
 const UserPanelInfo = () => {
     return (
             <Switch>
-                <Route path="/userPanel/orders/:serviceId">
+                <Route path="/userPanel/:serviceId/orders">
                     <UserOrder></UserOrder>
                 </Route>
                 <Route path="/userPanel/orderedServices">

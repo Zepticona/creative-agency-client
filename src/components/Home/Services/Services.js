@@ -43,7 +43,7 @@ const Services = () => {
             {
                 services.map( service => 
                     <Col md={4} key={service._id}>
-                        <Link to={`/userPanel/orders/${service._id}`}><SingleService serviceInfo={service} /></Link>
+                        <Link to={`/userPanel/${service._id}/orders`}><SingleService serviceInfo={service} /></Link>
                     </Col>
                 )
             }

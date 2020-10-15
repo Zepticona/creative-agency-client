@@ -8,15 +8,23 @@ const UserOrder = () => {
     const [service, setService] = useState({})
     const [order, setOrder] = useState({});
     const serviceIdObject = useParams()
-    // console.log(serviceIdObject.serviceId)
-
+    sessionStorage.setItem('selectedServiceId', serviceIdObject.serviceId)
     useEffect( () => {
         fetch(`http://localhost:8080/userPanel/orders/${serviceIdObject.serviceId}`)
         .then( res => res.json())
         .then( data => {
             const serviceInfo = {...data}
+            console.log(serviceInfo);
             setService(serviceInfo)
-            setOrder({...serviceInfo,  serviceName: serviceInfo.servName, email: loggedInUser.email, status: 'pending'})
+            setOrder({
+                servImg: serviceInfo.servImg,
+                servName: serviceInfo.servName,
+                servDescription: serviceInfo.servDescription,
+                serviceName: serviceInfo.servName, 
+                email: loggedInUser.email, 
+                status: 'pending'
+            })
+            console.log(order);
         })
     }, [])
 

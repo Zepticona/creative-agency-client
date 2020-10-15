@@ -28,9 +28,9 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/adminPanel">
+          <PrivateRoute path="/adminPanel">
             <AdminPanel></AdminPanel>
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path="/userPanel">
             <UserPanel></UserPanel>
           </PrivateRoute>
