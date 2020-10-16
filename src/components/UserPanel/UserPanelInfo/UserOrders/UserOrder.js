@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../../App';
 import classes from '../userPanelInfo.module.css'
@@ -54,41 +56,41 @@ const UserOrder = () => {
             <Form className={classes.userOrdersForm} onSubmit={handleFormSubmit}>
                 <Form.Row>
                 <Col md={8}>
-                    <Form.Group>
-                        <Form.Control onBlur={handleBlur} name="userName" type="text"  placeholder="Your name / company’s name" id="title" required />
-                    </Form.Group>
+                    
+                        <input onBlur={handleBlur} name="userName" type="text"  placeholder="Your name / company’s name" id="title" required />
+                    
                 </Col>
 
                 <Col md={8}>
-                    <Form.Group>
-                        <Form.Control onBlur={handleBlur} name="email" type="email" value={loggedInUser.email} id="email" required />
-                    </Form.Group>
+                    
+                        <input onBlur={handleBlur} name="email" type="email" value={loggedInUser.email} id="email" required />
+                    
                 </Col>
                 <Col md={8}>
-                    <Form.Group>
-                        <Form.Control onBlur={handleBlur} name="serviceName" type="text" value={service.servName} id="serviceName" />
-                    </Form.Group>
+                    
+                        <input onBlur={handleBlur} name="serviceName" type="text" value={service.servName} id="serviceName" />
+                    
                 </Col>
                 <Col md={8}>
-                    <Form.Group>
-                        <Form.Control onBlur={handleBlur} name="serviceDescription" type="text" placeholder="Project Details" id="description" required />
-                    </Form.Group>
+                    
+                        <textarea className={classes.textArea} onBlur={handleBlur} name="serviceDescription" type="text" placeholder="Project Details" id="description" required />
+                    
                 </Col>
                 </Form.Row>
                 <Form.Row>
                     <Col md={4}>
-                        <Form.Group>
-                            <Form.Control onBlur={handleBlur} name="price" type="number" placeholder="Price" id="price" required />
-                        </Form.Group>
+                        
+                            <input onBlur={handleBlur} name="price" type="number" placeholder="Price" id="price" required />
+                        
                     </Col>
                     <Col md={4}>
-                        <Form.Group>
-                            <Button disabled style={{display: 'block', width: '100%'}}>Upload Project File</Button>
-                        </Form.Group>
+                        
+                            <Button disabled ><FontAwesomeIcon icon={faCloudUploadAlt} />  Upload Project File</Button>
+                        
                     </Col>
                 </Form.Row>
 
-                <Button variant="secondary" type="submit">Submit</Button>
+                <input className={classes.orderSubmit} variant="secondary" type="submit" value="Submit" />
 
             </Form>
         </div>

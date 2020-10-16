@@ -52,7 +52,7 @@ const Login = () => {
             <div className={classes.loginBox}>
                 <h4>Login With</h4>
                 <button className={classes.loginBtn} onClick={googleLoginHandler}>
-                    <img src={`asd`} alt=""/>
+                    <img src={require('../../assets/images/logos/googleLogo.png')} alt=""/>
                     <span>Continue with google</span>
                 </button>
                 <p>Don't have an account? <a href="https://accounts.google.com/signup?hl=en" target="_blank">Crate an account</a> </p>

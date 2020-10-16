@@ -1,17 +1,33 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import classes from './customers.module.css'
 
 const Customers = () => {
+    // className={classes.customersContainer}
     return (
         <Container>
-            <div className={classes.customersContainer}>
-                <img src={require('../../../assets/images/logos/google.png')} alt=""/>
-                <img src={require('../../../assets/images/logos/airbnb.png')} alt=""/>
-                <img src={require('../../../assets/images/logos/netflix.png')} alt=""/>
-                <img src={require('../../../assets/images/logos/slack.png')} alt=""/>
-                <img src={require('../../../assets/images/logos/uber.png')} alt=""/>
-            </div>
+            <Row className={`${classes.customersContainer} align-items-center`}>
+
+                <img src={require('../../../assets/images/logos/google.png')} alt="" />
+
+
+
+                <img src={require('../../../assets/images/logos/airbnb.png')} alt="" />
+
+
+
+                <img src={require('../../../assets/images/logos/netflix.png')} alt="" />
+
+
+
+                <img src={require('../../../assets/images/logos/slack.png')} alt="" />
+
+
+
+                <img src={require('../../../assets/images/logos/uber.png')} alt="" />
+
+
+            </Row>
         </Container>
     );
 };

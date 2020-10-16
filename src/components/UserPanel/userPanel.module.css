@@ -1,4 +1,4 @@
-.wrappingContainer {
+.wrappingContainer, .adminPanelWrappingContainer {
     display: flex;
     padding: 15px;
     height: 100vh;
@@ -6,6 +6,47 @@
 .userNavigationPanel {
     width: 26%;
 }
+.adminNavigationPanel {
+    width: 20%;
+}
 .userInfoPanel {
     width: 100%;
 }
+@media only screen and (max-width: 767px) {
+    .wrappingContainer {
+        flex-direction: column;
+    }
+    .userNavigationPanel {
+        width: 100%;
+    }
+    .userNavigationPanel div {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .adminPanelWrappingContainer {
+        flex-direction: column;
+    }
+    .adminPanelContainer{
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .adminNavigationPanel {
+        width: 100%;
+    }
+    .adminNavigationPanel div {
+        display: flex;
+        justify-content: space-between;
+    }
+    .adminNavigationPanel div img{
+        width: 115px;
+    }
+}
+
+/* @media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+         max-width: 100%;
+    }
+} */

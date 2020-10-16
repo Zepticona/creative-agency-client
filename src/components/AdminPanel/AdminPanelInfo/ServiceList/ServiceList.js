@@ -12,7 +12,7 @@ const ServiceList = () => {
             const newOrders = [...data];
             setOrders(newOrders);
         })
-    }, [])
+    }, []) 
 
     const changeStatus = (e, order) => {
         const currentOrderInfo = {...order}
@@ -31,17 +31,19 @@ const ServiceList = () => {
     return (
         <div>
             <h2 style={{ marginBottom: '20px', marginTop: '25px' }}>Service List</h2>
-            <Container className={classes.card}>
-                <Row className={classes.headerRow}>
-                    <Col md={2}>Name</Col>
-                    <Col md={2}>Email ID</Col>
-                    <Col md={2}>Service</Col>
-                    <Col md={4}>Project Details</Col>
-                    <Col md={2}>Status</Col>
-                </Row>
-                {
-                    orders.map ( order => <SingleServiceRow clicked={(e) => changeStatus(e, order)} key={order._id} orderDetail={order}></SingleServiceRow>)
-                }
+            <Container className={classes.allOrdersContainer}>
+                <div className={classes.orderListContainer}>  
+                    <Row className={classes.headerRow}>
+                        <Col md={2}><span>Name</span></Col>
+                        <Col md={3}><span>Email ID</span></Col>
+                        <Col md={2}><span>Service</span></Col>
+                        <Col md={3}><span>Project Details</span></Col>
+                        <Col md={2}><span>Status</span></Col>
+                    </Row>
+                    {
+                        orders.map ( order => <SingleServiceRow clicked={(e) => changeStatus(e, order)} key={order._id} orderDetail={order}></SingleServiceRow>)
+                    }
+                </div>
             </Container>
         </div>
     );

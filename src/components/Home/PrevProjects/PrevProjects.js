@@ -6,13 +6,26 @@ import { Container } from 'react-bootstrap';
 import classes from './prevProjects.module.css'
 
 const PrevProjects = () => {
-    return (
+    return ( 
         <div className={classes.carouselContainer}>
             <h2>Here are some of <span className="brandText">our works</span></h2>
             <Container className>
             <OwlCarousel
             items={3}
             className="owl-theme"
+            responsive={
+                {
+                    0 : {
+                        items: 1
+                    },
+                    480 : {
+                        items: 2
+                    },
+                    768 : {
+                        items: 3
+                    }
+                }
+            }
             loop="true"
             autoplay={true}
             margin={20}

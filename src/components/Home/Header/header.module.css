@@ -36,11 +36,15 @@
 .headerContent h2 {
     font-weight: bold;
     font-size: 48px;
-    line-height: 60px;
     color: #111430;
 }
 .headerImg img{
     max-width: 100%;
 }
 
+@media only screen and (max-width: 767px) {
+    .headerContent h2 {
+        font-size: 30px;
+    }
+}
 

@@ -2,6 +2,7 @@
     border: 1px solid #BFBFBF;
     box-sizing: border-box;
     border-radius: 4px;
+    margin: 10px;
     padding: 20px;
 }
 .clientInfo {
@@ -14,7 +15,7 @@
 .clientInfo p {
     display: inline-block;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 19px;
     margin: 0;
     position: relative;
     top: 20px;
@@ -25,4 +26,5 @@
 }
 .clientFeedback {
     color: #707070;
+    margin-top: 24px;
 }

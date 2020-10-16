@@ -14,3 +14,9 @@
     text-decoration: none;
     color: rgb(80, 128, 230);
 }
+
+@media only screen and (max-width: 991px) {
+    .adminNavFirstLink {
+        margin-top: 0;
+    }
+}

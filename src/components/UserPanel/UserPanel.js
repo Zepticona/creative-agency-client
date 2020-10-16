@@ -8,7 +8,7 @@ const UserPanel = () => {
     const serviceIdObject = useParams()
     console.log(serviceIdObject)
     return (
-        <Container>
+        <Container> 
             <div className={classes.wrappingContainer}>
                 <div className={classes.userNavigationPanel}>
                     <UserPanelNav></UserPanelNav>

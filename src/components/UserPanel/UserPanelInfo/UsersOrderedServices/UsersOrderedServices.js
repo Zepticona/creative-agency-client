@@ -19,7 +19,7 @@ const UsersOrderedServices = () => {
         })
     }, [])
     return (
-        <div>
+        <div style={{height: '100vh'}}>
             <h2 style={{ marginBottom: '20px', marginTop: '25px' }}>Ordered Services</h2>
             <div className={classes.servicesContainer}>
                 <Row>

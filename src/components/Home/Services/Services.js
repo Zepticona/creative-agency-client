@@ -38,8 +38,8 @@ const Services = () => {
     }, [])
     return (
         <Container style={{marginBottom: '100px'}}>
-            <h2 style={{textAlign: 'center', marginBottom: '50px'}}>Provice awesome <span className="brandText">services</span></h2>
-            <Row>
+            <h2 style={{textAlign: 'center', marginBottom: '50px'}}>Provide awesome <span className="brandText">services</span></h2>
+            <Row className={`align-items-center`}>
             {
                 services.map( service => 
                     <Col md={4} key={service._id}>
