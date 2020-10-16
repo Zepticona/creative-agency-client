@@ -1,7 +1,9 @@
+import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import classes from '../../adminPanel.module.css'
-const AddService = () => {
+const AddService = () => { 
     const [serviceInfo, setServiceInfo] = useState({});
     const [file, setFile] = useState(null);
     const handleFormSubmit =  (e) => {
@@ -38,22 +40,25 @@ const AddService = () => {
         <div>
             <h2 style={{ marginBottom: '20px', marginTop: '25px' }}>Add Services</h2>
             <div className={classes.addServiceContainer}>
-                <form onSubmit={handleFormSubmit} className={classes.formContainer}>
-                    <Row>
+                <form onSubmit={handleFormSubmit} >
+                    <Row className={classes.formContainer}>
                         <Col md={6}>
                             <p>Service Title</p>
-                            <input onBlur={handleBlur} type="text" name="servName" id=""/>
+                            <input className={classes.addServiceInput} onBlur={handleBlur} type="text" name="servName" id=""/>
                         </Col>
                         <Col md={6}>
                             <p>Icon</p>
-                            <input onChange={handleFileChange} type="file" name="servImg" id=""/>
+                            <label for="file-upload" className={classes.customFileUpload}>
+                                <FontAwesomeIcon icon={faUpload} /> Upload Image
+                            </label>
+                            <input id="file-upload" type="file" onChange={handleFileChange} name="servImg" />
                         </Col>
                         <Col md={6}>
                             <p>Description</p>
-                            <input onBlur={handleBlur} type="text" name="servDescription" id=""/>
+                            <input className={classes.addServiceInput} onBlur={handleBlur} type="text" name="servDescription" id=""/>
                         </Col>
                     </Row>
-                    <input type="submit" value="Submit"/>
+                    <input className={classes.addServiceSubmitBtn} type="submit" value="Submit"/>
                 </form>
             </div>
         </div>

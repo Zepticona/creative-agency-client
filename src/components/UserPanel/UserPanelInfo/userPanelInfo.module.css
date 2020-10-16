@@ -1,7 +1,6 @@
 .userOrdersForm {
     padding: 30px;
     background-color: #F4F7FC;
-    height: 100vh;
 }
 .userOrdersForm input{
     width: 90%;
@@ -10,6 +9,13 @@
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
+}
+.userOrdersForm .orderSubmit {
+    width: 170px;
+    height: 60px;
+    background: #111430;
+    text-align: center;
+    color: white;
 }
 .userOrdersForm textarea {    
     width: 90%;
@@ -28,14 +34,12 @@
     color: #009444 !important;
     height: 60px;
 }
-.orderSubmit {
-    width: 170px;
-height: 60px;
-background: #111430;
-text-align: center;
-color: white;
+.userOrdersForm button.reviewSubmitBtn {
+    background: #111430 !important;
+    width: 150px;
+    border: none !important;
+    color: white !important;
 }
-
 
 .serviceIcon {
     width: 74px;

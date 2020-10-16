@@ -32,10 +32,10 @@ const MakeAdmin = () => {
                     <Row>
                         <Col md={6}>
                             <p>Make Admin</p>
-                            <input onBlur={handleBlur} type="email" name="email" id="" placehodler="Enter email" />
+                            <input onBlur={handleBlur} className={classes.addAdminInput} type="email" name="email" id="" placehodler="Enter email" />
+                            <input className={classes.addAdminSubmitBtn} type="submit" value="Submit"/>
                         </Col>
                     </Row>
-                    <input type="submit" value="Submit"/>
                 </form>
             </div>
         </div>

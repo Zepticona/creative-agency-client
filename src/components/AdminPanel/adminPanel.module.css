@@ -6,4 +6,47 @@
 .formContainer {
     background-color: white;
     padding: 20px;
+    border-radius: 15px;
 }
+.formContainer p {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.addServiceInput {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 0.666667px solid #C9C9C9;
+    box-sizing: border-box;
+    border-radius: 3.33333px;
+}
+.addAdminInput {
+    width: 65%;
+    margin-bottom: 20px;
+    border: 0.666667px solid #C9C9C9;
+    box-sizing: border-box;
+    border-radius: 3.33333px;
+    margin-right: 10px;
+}
+input[type="file"] {
+    display: none;
+}
+.customFileUpload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background: #DEFFED;
+    border: 1px solid #009444;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #009444;
+}
+.addServiceSubmitBtn, .addAdminSubmitBtn {
+    width: 108px;
+    height: 37px;
+    background: #009444;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+

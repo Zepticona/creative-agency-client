@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../../App';
-import classes from '../userPanelInfo.module.css'
+import classes from '../userPanelInfo.module.css' 
 const UserOrder = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [service, setService] = useState({})

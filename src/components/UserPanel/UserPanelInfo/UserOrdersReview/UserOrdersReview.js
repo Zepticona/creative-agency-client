@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
+import { UserContext } from '../../../../App';
 import classes from '../userPanelInfo.module.css'
-const UserOrdersReview = () => {
+const UserOrdersReview = () => { 
 
+    const [loggedInUser, setLoggedInuser] = useContext(UserContext);
     const [review, setReview] = useState({});
     const handleBlur = e => {
         const reviewInfo = {...review};
+        reviewInfo.reviewerImg = `URL--${loggedInUser.userImg}`;
         reviewInfo[e.target.name] = e.target.value;
         setReview(reviewInfo)
     }
@@ -41,11 +44,11 @@ const UserOrdersReview = () => {
                 </Col>
                 <Col md={8}>
                     <Form.Group>
-                        <Form.Control onBlur={handleBlur} type="text" placeholder="Description" name="feedback" required />
+                        <Form.Control  className={classes.reviewDescription} onBlur={handleBlur} type="text" placeholder="Description" name="feedback" required />
                     </Form.Group>
                 </Col>
                 </Form.Row>
-                <Button style={{background: '#111430'}} type="submit">Submit</Button>
+                <Button className={classes.reviewSubmitBtn} style={{background: '#111430'}} type="submit">Submit</Button>
             </Form>
         </div>
     );
