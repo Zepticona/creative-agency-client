@@ -29,7 +29,7 @@ const UsersOrderedServices = () => {
                 <Row>
                     {loading ? 
                     <Loader
-                type="Bars"
+                type="Bars" 
                 color="#00BFFF"
                 height={100}
                 width={100}

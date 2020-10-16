@@ -19,7 +19,7 @@ const UserOrder = () => {
             console.log(serviceInfo);
             setService(serviceInfo)
             setOrder({
-                servImg: serviceInfo.servImg,
+                image: serviceInfo.image,
                 servName: serviceInfo.servName,
                 servDescription: serviceInfo.servDescription,
                 serviceName: serviceInfo.servName, 
