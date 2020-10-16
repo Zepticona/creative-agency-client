@@ -11,7 +11,7 @@ const SingleFeedback = (props) => {
         console.log(imageLink)
     } 
     if( reviewerImg.split('URL--')[1]=== undefined) {
-        imageLink = `http://localhost:8080/${reviewerImg}`;
+        imageLink = `${reviewerImg}`;
         console.log(imageLink)
     }
     return (
