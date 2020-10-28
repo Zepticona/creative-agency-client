@@ -25,14 +25,8 @@ A full stack web app for users to order services and admins to monitor orders.
   * HTML
 ### Framework/Libraries
   * ReactJS
-  * Express
   * Bootstrap
-### Server Environment
-  * NodeJS
-### Database
-  * MongoDB
-### Hosting Srvices
-  * Heroku
+### Authentication Services
   * Firebase
   
 ### Some packages used
