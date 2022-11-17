@@ -9,7 +9,7 @@ const Services = () => {
     const [loading, setLoading] = useState(true);
     const [services, setServices] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:8080/allServices')
+        fetch('https://creative-agency-backend.onrender.com/allServices')
         .then( res => res.json())
         .then ( data => {
             const newServices = [...data];

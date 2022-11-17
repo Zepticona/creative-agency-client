@@ -15,7 +15,7 @@ const MakeAdmin = () => {
 
 
     const handleFormSubmit = e => {
-        fetch('http://localhost:8080/addAdmin', {
+        fetch('https://creative-agency-backend.onrender.com/addAdmin', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(email)

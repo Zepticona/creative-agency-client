@@ -1,12 +1,16 @@
 import React, { useContext } from 'react';
-import * as firebase from "firebase/app";
-import "firebase/auth";
-import firebaseConfig from './firebase.config'
+// import * as firebase from "firebase/app";
+// import "firebase/auth";
+import app from './firebase.config'
+import { getAuth, GoogleAuthProvider, signInWithPopup  } from "firebase/auth";
+
+
 import { UserContext } from '../../App';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import classes from './login.module.css'
 
 const Login = () => {
+    console.log(app);
 
     let history = useHistory();
     let location = useLocation();
@@ -15,35 +19,59 @@ const Login = () => {
     const [loggedInUser, setLoggedInuser] = useContext(UserContext);
     
     // Stopping firebase from creating an infinite loop by rerendering the dom
-    if(firebase.apps.length === 0) {
-        firebase.initializeApp(firebaseConfig);
-    }
+    // if(firebase.apps.length === 0) {
+    //     firebase.initializeApp(firebaseConfig);
+    // }
     
     // Logging in google account
-    const provider = new firebase.auth.GoogleAuthProvider();    
+    const auth = getAuth();
+    
+    
+    // const provider = new firebase.auth.GoogleAuthProvider();    
     const googleLoginHandler = () => {
-        firebase.auth().signInWithPopup(provider)
-        .then(result => {
-            console.log(result)
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+        .then((result) => {
             const userInfos = {
-                name: result.user.displayName,
-                email: result.user.email,
-                userImg: result.user.photoURL
-            }
-            setLoggedInuser(userInfos);
-            history.replace(from);
-        })
-        .catch( error => {
+            name: result.user.displayName,
+            email: result.user.email,
+            userImg: result.user.photoURL
+        }
+        setLoggedInuser(userInfos);
+        history.replace(from);
+            
+        }).catch((error) => {
             // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
+            const errorCode = error.code;
+            const errorMessage = error.message;
             // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
+            const email = error.customData?.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
             // ...
-            console.log(errorCode, errorMessage, email, credential)
         });
+        // firebase.auth().signInWithPopup(provider)
+        // .then(result => {
+        //     console.log(result)
+        //     const userInfos = {
+        //         name: result.user.displayName,
+        //         email: result.user.email,
+        //         userImg: result.user.photoURL
+        //     }
+        //     setLoggedInuser(userInfos);
+        //     history.replace(from);
+        // })
+        // .catch( error => {
+        //     // Handle Errors here.
+        //     var errorCode = error.code;
+        //     var errorMessage = error.message;
+        //     // The email of the user's account used.
+        //     var email = error.email;
+        //     // The firebase.auth.AuthCredential type that was used.
+        //     var credential = error.credential;
+        //     // ...
+        //     console.log(errorCode, errorMessage, email, credential)
+        // });
     }
     
     return (

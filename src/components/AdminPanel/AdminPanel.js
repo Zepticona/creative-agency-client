@@ -8,7 +8,7 @@ const AdminPanel = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false)
     useEffect(() => {
-        fetch(`http://localhost:8080/isAdmin`, {
+        fetch(`https://creative-agency-backend.onrender.com/isAdmin`, {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(loggedInUser)

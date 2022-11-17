@@ -9,7 +9,7 @@ const Feedback = () => {
     
     const [loading, setLoading] = useState(true);
     useEffect( () => { 
-        fetch('http://localhost:8080/allReviews')
+        fetch('https://creative-agency-backend.onrender.com/allReviews')
         .then( res => res.json())
         .then( data => {
             const newReviews = [...data];

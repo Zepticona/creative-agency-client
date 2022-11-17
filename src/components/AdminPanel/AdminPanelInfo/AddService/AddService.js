@@ -13,7 +13,7 @@ const AddService = () => {
         formData.append('servImg', serviceInfo.servImg);
         formData.append('servDescription', serviceInfo.servDescription)
 
-        fetch('http://localhost:8080/addService', {
+        fetch('https://creative-agency-backend.onrender.com/addService', {
             method: 'POST',
             body: formData
         })

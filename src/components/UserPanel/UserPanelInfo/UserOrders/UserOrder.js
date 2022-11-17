@@ -12,7 +12,7 @@ const UserOrder = () => {
     const serviceIdObject = useParams()
     sessionStorage.setItem('selectedServiceId', serviceIdObject.serviceId)
     useEffect( () => {
-        fetch(`http://localhost:8080/userPanel/orders/${serviceIdObject.serviceId}`)
+        fetch(`https://creative-agency-backend.onrender.com/userPanel/orders/${serviceIdObject.serviceId}`)
         .then( res => res.json())
         .then( data => {
             const serviceInfo = {...data}
@@ -39,7 +39,7 @@ const UserOrder = () => {
     }
     const handleFormSubmit = e => {
 
-        fetch('http://localhost:8080/placeOrder', {
+        fetch('https://creative-agency-backend.onrender.com/placeOrder', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(order)

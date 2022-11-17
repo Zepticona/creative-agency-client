@@ -9,7 +9,7 @@ const ServiceList = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:8080/allOrders')
+        fetch('https://creative-agency-backend.onrender.com/allOrders')
             .then(res => res.json())
             .then(data => {
                 const newOrders = [...data];
@@ -24,7 +24,7 @@ const ServiceList = () => {
         const status = {
             updatedStatus: e.target.value
         }
-        fetch(`http://localhost:8080/updateStatus/${order._id}`, {
+        fetch(`https://creative-agency-backend.onrender.com/updateStatus/${order._id}`, {
             method: 'PATCH',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(status)

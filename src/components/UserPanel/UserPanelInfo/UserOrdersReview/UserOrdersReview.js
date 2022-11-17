@@ -15,7 +15,7 @@ const UserOrdersReview = () => {
 
     const handleFormSubmit = e => {
 
-        fetch('http://localhost:8080/addUserReview', {
+        fetch('https://creative-agency-backend.onrender.com/addUserReview', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(review)
